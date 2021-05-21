@@ -24,13 +24,16 @@ void Account::Withdraw(float value)
 		return;
 	}
 
-	if (value > balance)
+	float fee = value * GetWithdrawFee();
+	float finalValue = value + fee;
+
+	if (finalValue > balance)
 	{
 		std::cout << "Not enough cash, stranger" << std::endl;
 		return;
 	}
 
-	balance -= value;
+	balance -= finalValue;
 }
 
 void Account::Deposit(float value)

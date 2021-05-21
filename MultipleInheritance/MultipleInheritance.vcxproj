@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9f69dcdd-28b2-4b1c-8e2b-13fc9a5f0c2a}</ProjectGuid>
-    <RootNamespace>Bank</RootNamespace>
+    <ProjectGuid>{55cc80fa-20d5-426e-9c72-a445d6853fda}</ProjectGuid>
+    <RootNamespace>MultipleInheritance</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,29 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Authentication.cpp" />
-    <ClCompile Include="src\Cashier.cpp" />
-    <ClCompile Include="src\Manager.cpp" />
-    <ClCompile Include="src\SavingsAccount.cpp" />
-    <ClCompile Include="src\CurrentAccount.cpp" />
-    <ClCompile Include="src\Person.cpp" />
-    <ClCompile Include="src\Employee.cpp" />
-    <ClCompile Include="src\CPF.cpp" />
-    <ClCompile Include="src\Holder.cpp" />
-    <ClCompile Include="src\Account.cpp" />
     <ClCompile Include="src\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\Authentication.h" />
-    <ClInclude Include="src\Cashier.h" />
-    <ClInclude Include="src\Manager.h" />
-    <ClInclude Include="src\SavingsAccount.h" />
-    <ClInclude Include="src\CurrentAccount.h" />
-    <ClInclude Include="src\Person.h" />
-    <ClInclude Include="src\Employee.h" />
-    <ClInclude Include="src\CPF.h" />
-    <ClInclude Include="src\Holder.h" />
-    <ClInclude Include="src\Account.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

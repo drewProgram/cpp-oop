@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "_01Structs", "01Structs\Cpp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bank", "Bank\Bank.vcxproj", "{9F69DCDD-28B2-4B1C-8E2B-13FC9A5F0C2A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultipleInheritance", "MultipleInheritance\MultipleInheritance.vcxproj", "{55CC80FA-20D5-426E-9C72-A445D6853FDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{9F69DCDD-28B2-4B1C-8E2B-13FC9A5F0C2A}.Release|x64.Build.0 = Release|x64
 		{9F69DCDD-28B2-4B1C-8E2B-13FC9A5F0C2A}.Release|x86.ActiveCfg = Release|Win32
 		{9F69DCDD-28B2-4B1C-8E2B-13FC9A5F0C2A}.Release|x86.Build.0 = Release|Win32
+		{55CC80FA-20D5-426E-9C72-A445D6853FDA}.Debug|x64.ActiveCfg = Debug|x64
+		{55CC80FA-20D5-426E-9C72-A445D6853FDA}.Debug|x64.Build.0 = Debug|x64
+		{55CC80FA-20D5-426E-9C72-A445D6853FDA}.Debug|x86.ActiveCfg = Debug|Win32
+		{55CC80FA-20D5-426E-9C72-A445D6853FDA}.Debug|x86.Build.0 = Debug|Win32
+		{55CC80FA-20D5-426E-9C72-A445D6853FDA}.Release|x64.ActiveCfg = Release|x64
+		{55CC80FA-20D5-426E-9C72-A445D6853FDA}.Release|x64.Build.0 = Release|x64
+		{55CC80FA-20D5-426E-9C72-A445D6853FDA}.Release|x86.ActiveCfg = Release|Win32
+		{55CC80FA-20D5-426E-9C72-A445D6853FDA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

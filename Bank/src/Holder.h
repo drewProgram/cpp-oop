@@ -2,19 +2,12 @@
 
 #include <string>
 #include "CPF.h"
+#include "Person.h"
+#include "Authentication.h"
 
-class Holder
+class Holder : public Person, Authentication
 {
-private:
-	std::string name;
-	CPF cpf;
-
 public:
-	Holder(std::string name, CPF cpf);
-
-	std::string GetName();
-
-private:
-	void CheckNameSize();
+	Holder(std::string name, CPF cpf, std::string password);
 };
 
