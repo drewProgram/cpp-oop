@@ -162,6 +162,7 @@
     <ClInclude Include="src\CPF.h" />
     <ClInclude Include="src\Holder.h" />
     <ClInclude Include="src\Account.h" />
+    <ClInclude Include="src\WeekDay.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

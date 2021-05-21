@@ -6,7 +6,7 @@
 class Manager final : public Employee, Authentication
 {
 public:
-	Manager(std::string name, CPF cpf, float salary, std::string password);
+	Manager(std::string name, CPF cpf, float salary, WeekDay payday, std::string password);
 
 	float GetBonification() const;
 };

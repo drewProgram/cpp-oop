@@ -1,7 +1,7 @@
 #include "Employee.h"
 
-Employee::Employee(std::string name, CPF cpf, float salary)
-	: Person(name, cpf), salary(salary)
+Employee::Employee(std::string name, CPF cpf, float salary, WeekDay payday)
+	: Person(name, cpf), salary(salary), payday(payday)
 {
 }
 

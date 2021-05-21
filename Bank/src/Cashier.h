@@ -5,7 +5,7 @@
 class Cashier final : public Employee
 {
 public:
-	Cashier(std::string name, CPF cpf, float salary);
+	Cashier(std::string name, CPF cpf, float salary, WeekDay payday);
 
 	float GetBonification() const;
 };

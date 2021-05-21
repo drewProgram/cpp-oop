@@ -29,6 +29,8 @@ public:
 	void Withdraw(float value);
 	void Deposit(float value);
 
+	void operator+=(float value);
+
 	// const in the definition tells the compiler the method won't set anything in the class
 	float GetBalance() const;
 	// purely virtual method (it doesn't have an implementation on this class)

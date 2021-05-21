@@ -80,5 +80,8 @@
     <ClInclude Include="src\Authentication.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\WeekDay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,6 +2,7 @@
 #include <string>
 #include "SavingsAccount.h"
 #include "CurrentAccount.h"
+#include "Manager.h"
 
 void Login(Authentication& user, std::string password)
 {
@@ -17,14 +18,14 @@ void Login(Authentication& user, std::string password)
 int main()
 {
 	// Resource Aquisition Is Initialization (RAII)
-	Holder holder("Andrew", CPF("123.456.789-10"), "senha");
-	SavingsAccount account("12312312312", holder);
+	SavingsAccount account("12312312312", Holder("Andrew", CPF("123.456.789-10"), "senha"));
 	account.Deposit(2000);
 	account.Withdraw(500);
 
-	Holder anotherHolder("Joseph", CPF("123.456.789-10"), "senha2"); 
-	CurrentAccount anotherAccount("12312312321", anotherHolder);
-	anotherAccount.Deposit(2000);
+	Holder anotherHolder(); 
+	CurrentAccount anotherAccount("12312312321", Holder("Joseph", CPF("123.456.789-10"), "senha2"));
+	// += is overloaded
+	anotherAccount += 2000;
 	anotherAccount.Withdraw(500);
 
 	std::cout << "Your balance is " << account.GetBalance() << std::endl;
@@ -34,6 +35,8 @@ int main()
 	std::cout << "New balance: " << account.GetBalance() << std::endl;
 
 	std::cout << "Accounts number:  " << Account::GetAccountsNumber() << std::endl;
+
+	Manager manager("Chad Vader", CPF("123.456.879-02"), 3000.0f, WeekDay::Tuesday, "senha!");
 
 	std::cin.get();
 }

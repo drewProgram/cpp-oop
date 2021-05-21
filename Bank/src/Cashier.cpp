@@ -1,7 +1,7 @@
 #include "Cashier.h"
 
-Cashier::Cashier(std::string name, CPF cpf, float salary)
-	: Employee(name, cpf, salary)
+Cashier::Cashier(std::string name, CPF cpf, float salary, WeekDay payday)
+	: Employee(name, cpf, salary, payday)
 {
 }
 

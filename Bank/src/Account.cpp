@@ -47,6 +47,11 @@ void Account::Deposit(float value)
 	balance += value;
 }
 
+void Account::operator+=(float value)
+{
+	Deposit(value);
+}
+
 int Account::GetAccountsNumber()
 {
 	return accountsNumber;
