@@ -53,6 +53,11 @@ void Account::operator+=(float value)
 	Deposit(value);
 }
 
+bool Account::operator<(const Account& account)
+{
+	return this->balance < account.balance;
+}
+
 int Account::GetAccountsNumber()
 {
 	return accountsNumber;

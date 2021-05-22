@@ -39,6 +39,7 @@ public:
 	std::variant<WithdrawError, float> Withdraw(float value);
 	void Deposit(float value);
 
+	bool operator<(const Account& account);
 	void operator+=(float value);
 	// this function can access the account properties
 	friend std::ostream& operator<<(std::ostream& cout, const Account& account);

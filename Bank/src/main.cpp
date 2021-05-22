@@ -38,6 +38,13 @@ void MakeWithdraw(Account& account)
 	std::cout << "Error!" << std::endl;
 }
 
+// template function
+template<typename T>
+T Smaller(T a, T b)
+{
+	return a < b ? a : b;
+}
+
 int main()
 {
 	// Resource Aquisition Is Initialization (RAII)
@@ -63,6 +70,8 @@ int main()
 	Manager manager("Chad Vader", CPF("123.456.879-02"), 3000.0f, WeekDay::Tuesday, "senha!");
 
 	MakeWithdraw(anotherAccount);
+
+	std::cout << Smaller<Account&>(account, anotherAccount);
 
 	std::cin.get();
 }
