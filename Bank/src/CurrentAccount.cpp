@@ -7,8 +7,15 @@ CurrentAccount::CurrentAccount(std::string number, Holder holder)
 
 void CurrentAccount::Transfer(Account& target, float value)
 {
-	Withdraw(value);
-	target.Deposit(value);
+	Account::WithdrawResult result = Withdraw(value);
+
+	if (result == Success)
+	{
+		target.Deposit(value);
+		return;
+	}
+
+	std::cout << "Operation failed" << std::endl;
 }
 
 void CurrentAccount::operator+=(CurrentAccount& originAccount)

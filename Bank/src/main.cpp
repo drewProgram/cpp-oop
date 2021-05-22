@@ -43,12 +43,12 @@ int main()
 
 	anotherAccount.Transfer(account, 200);
 	std::cout << "New balance: " << account.GetBalance() << std::endl;
-
-	
 	std::cout << account;
 	std::cout << "Accounts number:  " << Account::GetAccountsNumber() << std::endl;
 
 	Manager manager("Chad Vader", CPF("123.456.879-02"), 3000.0f, WeekDay::Tuesday, "senha!");
+
+	Account::WithdrawResult result = anotherAccount.Withdraw(500);
 
 	std::cin.get();
 }

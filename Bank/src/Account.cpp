@@ -16,12 +16,12 @@ Account::~Account()
 	accountsNumber--;
 }
 
-void Account::Withdraw(float value)
+Account::WithdrawResult Account::Withdraw(float value)
 {
 	if (value < 0)
 	{
 		std::cout << "You can't withdraw negative values" << std::endl;
-		return;
+		return NegativeValue;
 	}
 
 	float fee = value * GetWithdrawFee();
@@ -30,10 +30,11 @@ void Account::Withdraw(float value)
 	if (finalValue > balance)
 	{
 		std::cout << "Not enough cash, stranger" << std::endl;
-		return;
+		return InsufficientBalance;
 	}
 
 	balance -= finalValue;
+	return Success;
 }
 
 void Account::Deposit(float value)

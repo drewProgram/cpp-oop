@@ -25,8 +25,12 @@ public:
 	// be called.
 	virtual ~Account();
 
-	// virtual can be defined here or on the child class
-	void Withdraw(float value);
+	enum WithdrawResult
+	{
+		Success, NegativeValue, InsufficientBalance
+	};
+
+	WithdrawResult Withdraw(float value);
 	void Deposit(float value);
 
 	void operator+=(float value);
