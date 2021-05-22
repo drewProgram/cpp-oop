@@ -30,6 +30,8 @@ public:
 	void Deposit(float value);
 
 	void operator+=(float value);
+	// this function can access the account properties
+	friend std::ostream& operator<<(std::ostream& cout, const Account& account);
 
 	// const in the definition tells the compiler the method won't set anything in the class
 	float GetBalance() const;

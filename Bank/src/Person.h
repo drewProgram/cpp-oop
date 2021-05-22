@@ -12,6 +12,7 @@ protected:
 
 public:
 	Person(std::string name, CPF cpf);
+	std::string GetName() const;
 
 private:
 	void CheckNameSize();

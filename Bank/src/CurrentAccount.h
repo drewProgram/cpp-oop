@@ -9,6 +9,8 @@ public:
 
 	void Transfer(Account& account, float value);
 
+	void operator+=(CurrentAccount& originAccount);
+
 	float GetWithdrawFee() const override;
 };
 

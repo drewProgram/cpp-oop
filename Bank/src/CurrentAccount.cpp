@@ -11,6 +11,11 @@ void CurrentAccount::Transfer(Account& target, float value)
 	target.Deposit(value);
 }
 
+void CurrentAccount::operator+=(CurrentAccount& originAccount)
+{
+	originAccount.Transfer(*this, originAccount.GetBalance() / 2);
+}
+
 float CurrentAccount::GetWithdrawFee() const
 {
 	std::cout << "Withdraw current-account" << std::endl;

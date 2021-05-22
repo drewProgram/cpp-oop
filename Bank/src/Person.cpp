@@ -6,6 +6,11 @@ Person::Person(std::string name, CPF cpf)
 	CheckNameSize();
 }
 
+std::string Person::GetName() const
+{
+	return name;
+}
+
 void Person::CheckNameSize()
 {
 	if (name.size() < 5)
