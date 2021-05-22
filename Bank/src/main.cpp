@@ -24,6 +24,20 @@ std::ostream& operator<<(std::ostream& cout, const Account& account)
 	return cout;
 }
 
+void MakeWithdraw(Account& account)
+{
+	std::variant<Account::WithdrawError, float>result = account.Withdraw(200);
+	// get the result reference if the value is a float. If it isn't a float, returns null
+	auto balance = std::get_if<float>(&result);
+	if (balance != nullptr)
+	{
+		std::cout << "New account balance: " << *balance << std::endl;
+		return;
+	}
+
+	std::cout << "Error!" << std::endl;
+}
+
 int main()
 {
 	// Resource Aquisition Is Initialization (RAII)
@@ -48,7 +62,7 @@ int main()
 
 	Manager manager("Chad Vader", CPF("123.456.879-02"), 3000.0f, WeekDay::Tuesday, "senha!");
 
-	Account::WithdrawResult result = anotherAccount.Withdraw(500);
+	MakeWithdraw(anotherAccount);
 
 	std::cin.get();
 }

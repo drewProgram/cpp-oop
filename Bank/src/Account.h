@@ -1,6 +1,8 @@
 #pragma once
 
 #include <string>
+#include <utility>
+#include <variant>
 #include "Holder.h"
 
 class Account
@@ -25,12 +27,16 @@ public:
 	// be called.
 	virtual ~Account();
 
-	enum WithdrawResult
+	enum WithdrawError
 	{
-		Success, NegativeValue, InsufficientBalance
+		NegativeValue, InsufficientBalance
 	};
 
-	WithdrawResult Withdraw(float value);
+	// instead of variant, u could use the pair to return a status message and the balance value.
+	// (make_pair)
+
+	// variant returns one of the two values (works only from C++ 17 on)
+	std::variant<WithdrawError, float> Withdraw(float value);
 	void Deposit(float value);
 
 	void operator+=(float value);

@@ -7,9 +7,10 @@ CurrentAccount::CurrentAccount(std::string number, Holder holder)
 
 void CurrentAccount::Transfer(Account& target, float value)
 {
-	Account::WithdrawResult result = Withdraw(value);
+	auto result = Withdraw(value);
 
-	if (result == Success)
+	// if 1, it means it is the float variant value
+	if (result.index() == 1)
 	{
 		target.Deposit(value);
 		return;

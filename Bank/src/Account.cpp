@@ -16,7 +16,7 @@ Account::~Account()
 	accountsNumber--;
 }
 
-Account::WithdrawResult Account::Withdraw(float value)
+std::variant<Account::WithdrawError, float> Account::Withdraw(float value)
 {
 	if (value < 0)
 	{
@@ -34,7 +34,7 @@ Account::WithdrawResult Account::Withdraw(float value)
 	}
 
 	balance -= finalValue;
-	return Success;
+	return balance;
 }
 
 void Account::Deposit(float value)
